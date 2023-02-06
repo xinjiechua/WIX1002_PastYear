@@ -14,8 +14,7 @@ public class Q3 {
             }
             System.out.println("Frequency Distribution Table");
             int max = 0, mode = 0;
-            for(int i=2; i<=10; i++){
-                if(i%2==0)
+            for(int i=2; i<=10; i+=2){
                     System.out.print(i + " : " + count[i] + "\n");
                 if(count[i]>max) {
                     max = count[i];
