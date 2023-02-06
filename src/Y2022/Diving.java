@@ -6,6 +6,7 @@ public class Diving {
     private double[][] scores;
     private double[] rating;
 
+
     public Diving(String name, String country, double[][] scores, double[] rating) {
         this.name = name;
         this.country = country;

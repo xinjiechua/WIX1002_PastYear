@@ -13,7 +13,14 @@ public class tester {
                 sc.nextLine();
             }
             int recordNo = lines/5;
-            sc.close();
+            /* or
+            while (sc.hasNextLine()) {
+                for (int i = 0; i < 5; i++) {
+                    sc.nextLine();
+                }
+                cnt++;
+            }
+             */
 
             Diving [] diver = new Diving[recordNo];
             sc = new Scanner(new FileInputStream("diving.txt"));
@@ -33,24 +40,25 @@ public class tester {
             sc.close();
             for(Diving d: diver)
                 System.out.println(d.toString() + "\n");
-
-            //sort
-            for(int i=0;i<recordNo;i++){
-                for(int j=0; j<recordNo-1;j++){
-                    if(diver[j].getFinalScore() < diver[j+1].getFinalScore()){
-                        Diving temp = diver[j];
-                        diver[j] = diver[j+1];
-                        diver[j+1] = temp;
-                    }
-                }
-            }
-
-            System.out.printf("Gold : %s (%s) \n",diver[0].getName(), diver[0].getCountry());
-            System.out.printf("Silver : %s (%s) \n",diver[1].getName(), diver[1].getCountry());
-            System.out.printf("Bronze : %s (%s) \n",diver[2].getName(), diver[2].getCountry());
+            display(diver);
 
         }catch(FileNotFoundException e){
             System.out.println("File was not found");
         }
+    }
+
+    public static void display(Diving[] d) {
+        for (int i = 0; i < d.length; i++) {
+            for (int j = 0; j < d.length - 1; j++) {
+                if (d[j].getFinalScore() < d[j + 1].getFinalScore()) {
+                    Diving temp = d[j];
+                    d[j] = d[j + 1];
+                    d[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Gold : " + d[0].getName() + " (" + d[0].getCountry() + ")");
+        System.out.println("Silver : " + d[1].getName() + " (" + d[1].getCountry() + ")");
+        System.out.println("Bronze : " + d[2].getName() + " (" + d[2].getCountry() + ")");
     }
 }

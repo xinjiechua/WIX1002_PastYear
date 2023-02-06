@@ -13,9 +13,8 @@ public class Q1 {
         System.out.print("3 random price values : ");
         for(int i=0; i<3;i++)
             System.out.printf("%.2f ",r.nextDouble() + r.nextInt(200)+100);
-        System.out.println(" ");
 
-        System.out.print("5 random even-numbered years : ");
+        System.out.print("\n5 random even-numbered years : ");
         int j=0;
         while(j<5){
             int rand = r.nextInt(41)+1990;   //max-min+1
@@ -24,15 +23,13 @@ public class Q1 {
                 j++;
             }
         }
-        System.out.println(" ");
 
-        char c = (char)(r.nextInt(26) + 'A');
-        System.out.print("Car Plate Number : ");
+        System.out.print("\nCar Plate Number : ");
         System.out.print(r.nextInt(90000)+10000);
-        System.out.print(c);
-        System.out.print(c + "\n");
+        System.out.print((char)(r.nextInt(26)+ 'A'));
+        System.out.print((char)(r.nextInt(26)+ 'A'));
 
-        System.out.print("Random Word : ");
+        System.out.print("\nRandom Word : ");
         int length = r.nextInt(8)+1;
         for(int i=0; i<length;i++){
             int choices=r.nextInt(2);
