@@ -33,10 +33,9 @@ public class Q4 {
         System.out.println("Records read from log file");
 
         for(int i=0; i<n; i++){
-            System.out.printf("Record %d: \n", i+1);
+            System.out.println("Record " + i + ":");
             for(String str : records[i]){
-                if(!str.isEmpty())
-                    System.out.printf("\t%s\n",str);
+                System.out.println("\t" + str);
             }
             System.out.println(" ");
         }
@@ -62,24 +61,18 @@ public class Q4 {
                 }
                 if(!found){
                     users[idx] = user;
-                    userJobs[idx++]++;
+                    userJobs[idx]++;
+                    idx++;
                 }
             }
         }
-        int userNum = 0;
-        for (int userJob : userJobs) {
-            if (userJob != 0)
-                userNum++;
-        }
 
-        for(int i=0; i<userNum; i++){
+        for(int i=0; i<idx; i++){
             System.out.println(users[i]+"\t\t\t"+userJobs[i]);
         }
-        System.out.println();
-        System.out.println("*************************************************");
-        System.out.println("Print jobs status");
-        System.out.println();
 
+        System.out.println("\n*************************************************");
+        System.out.println("Print jobs status\n");
         System.out.println("Job ID\tSubmitted (queue)\tStarted (start time)\tExpired (end time/error)");
         System.out.println("------\t-----------------\t--------------------\t------------------------");
 

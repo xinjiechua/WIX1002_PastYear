@@ -15,23 +15,27 @@ public class Q4 {
             while(sc.hasNextLine()) {
                 String line = sc.nextLine();
                 System.out.println(line);
-                text.append(line);
+                text.append(line).append(" ");
             }
         }catch(FileNotFoundException e){
             System.out.println("File was not found");
         }
 
-        String[]sentence = text.toString().split("[.]");
-        System.out.println("Number of sentences : "+ sentence.length);
+        String text2 = text.toString().replace("  "," ");
 
-        String[]words = text.toString().split(" ");
-        System.out.println("Number of words : " + words.length);
+        int sentence = text2.split("\\.").length;
+        System.out.println("\nNumber of sentences : " + sentence);
 
-        for(int i=0; i<text.length();i++){
-            String letter = String.valueOf(text.charAt(i));
-            for(int j=0; j< alphabet.length;j++)
-                if(letter.compareToIgnoreCase(String.valueOf(alphabet[j]))==0)
+        int word = text2.split(" ").length;
+        System.out.println("\nNumber of words : " + word);
+
+
+        for(int i=0; i<text2.length();i++){
+            for(int j=0; j< alphabet.length;j++) {
+                String letter = String.valueOf(text2.charAt(i));
+                if (letter.compareToIgnoreCase(String.valueOf(alphabet[j])) == 0)
                     count[j]++;
+            }
         }
 
         for(int i=0; i<alphabet.length;i++) {
