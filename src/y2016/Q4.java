@@ -27,13 +27,13 @@ public class Q4 {
          boolean upper = false, lower = false, digit = false, special = false;
          for(int i=0; i<pw.length();i++){
              char c = pw.charAt(i);
-             if((int)c >= (int)'A'&& (int)c <= (int)'Z')
+             if(c >= 'A' && c <= 'Z')
                  upper = true;
-             else if((int)c >= (int)'a'&& (int)c <= (int)'z')
+             else if( c >= 'a' && c <= 'z')
                  lower = true;
-             else if((int)c >= (int)'0'&& (int)c <= (int)'9')
+             else if(c >= '0' && c <= '9')
                  digit = true;
-             else if((int)c!=(int)' ')
+             else if(c != ' ')
                  special = true;
          }
          return length && upper && lower && digit && special;
