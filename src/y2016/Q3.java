@@ -40,7 +40,7 @@ public class Q3 {
     public static void round(int[]arr){
         System.out.print("The approximation of the integer to the nearest tenth :");
         for(int i=0; i<arr.length; i++){
-            System.out.print(Math.round(arr[i]/10.0)*10 + " ");
+            System.out.print((arr[i]/10)*10 + " ");
         }
     }
     
