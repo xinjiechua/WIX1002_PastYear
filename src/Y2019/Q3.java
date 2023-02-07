@@ -20,7 +20,7 @@ public class Q3 {
                 else if((triplet.equals("TAG")) || (triplet.equals("TAA"))||(triplet.equals("TGA")) && start!=-1){
                     //current triplet is the end of a gene
                     try{
-                        gene = genome.substring(start,i);  //when triplet become TAG these sure i ady bigger than start at least 6
+                        gene = genome.substring(start,i);  //when triplet become TAG, i has become bigger than start
                     } catch(StringIndexOutOfBoundsException e){
                         continue;
                     }
