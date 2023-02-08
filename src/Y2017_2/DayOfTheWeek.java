@@ -27,7 +27,7 @@ public class DayOfTheWeek {
                     break;
                 } 
             case 13:
-                max = 41;
+                max = 31;
                 break;
             default:
                 max = 31;
