@@ -9,7 +9,7 @@ public class Q3 {
         do{
         int num1 = r.nextInt(10);
         int num2 = r.nextInt(10);
-        System.out.print("\nWhat is " + num1 + " + " + num2 + "? ");
+        System.out.print("What is " + num1 + " + " + num2 + "? ");
         int ans = sc.nextInt();
         if(num1 + num2 == ans)
             System.out.println(num1 + " + " + num2 + " is true");
@@ -17,10 +17,11 @@ public class Q3 {
             System.out.println(num1 + " + " + num2 + " is false");
         System.out.print("Do you want to try another question(y/n)? :");
             ans2 = sc.next().charAt(0);
-            
+
+            System.out.println("");
             if(ans2 == 'n'){
                 System.out.println("Program ends.");
-                System.exit(0);
+                return;
             }
         } while(ans2 == 'y');
     }
