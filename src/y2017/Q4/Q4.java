@@ -15,12 +15,10 @@ public class Q4 {
         Complex c1 = new Complex(a,b);
         Complex c2 = new Complex(c,d);
         
-        System.out.println("\nFirst complex number: " + c1.toString());
-        System.out.println("Second complex number: " + c2.toString());
-        Complex result = c1.addComplexNum(c2);
-        System.out.println("Addition of the two complex number: " + result.toString());
-        result = c1.subtractComplexNum(c2);
-        System.out.println("Substraction of the complex number: " + result.toString());
+        System.out.println("\nFirst complex number: " + c1);
+        System.out.println("Second complex number: " + c2);
+        System.out.println("Addition of the two complex numbers:" + c1.addComplexNum(c2));
+        System.out.println("Subtraction of the two complex numbers:" + c1.subtractComplexNum(c2));
 
     }
 }

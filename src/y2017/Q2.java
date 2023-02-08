@@ -8,7 +8,7 @@ public class Q2 {
         int fee = sc.nextInt();
         System.out.print("Enter the yearly rate of increment (e.g enter 5.2 for 5.2%):");
         double rate = sc.nextDouble();
-        System.out.print("Enter the yeaer for which you wish to compute the tuition fee for: ");
+        System.out.print("Enter the year for which you wish to compute the tuition fee for: ");
         int year = sc.nextInt();
         
         System.out.printf("\nComputed tuition fee for year %d is: %.2f",year,computeFee(fee,rate,year));

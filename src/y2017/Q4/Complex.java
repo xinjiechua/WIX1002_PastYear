@@ -5,7 +5,8 @@ public class Complex {
     protected double r, i;
     
     public Complex(){
-        
+        r=0;
+        i=0;
     }
     
     public Complex(double r, double i){
@@ -29,6 +30,6 @@ public class Complex {
      
      @Override
      public String toString(){
-         return"(" + r + " + " + i + "i" + ")" ;
+         return"(" + (int)r + " + " + (int)i + "i" + ")" ;
      }
 }
